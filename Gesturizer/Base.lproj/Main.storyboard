@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15C31f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15C40a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
     </dependencies>
@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrM-oy-ef1">
-                                <rect key="frame" x="206" y="252" width="189" height="96"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foobar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrM-oy-ef1">
+                                <rect key="frame" x="199" y="252" width="202" height="96"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="189" id="MlE-nW-iFg"/>
+                                    <constraint firstAttribute="width" constant="202" id="MlE-nW-iFg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="80"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -29,20 +29,36 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="CrM-oy-ef1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UJF-wO-k8o"/>
                             <constraint firstItem="CrM-oy-ef1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="232" id="YsM-61-yCa"/>
                             <constraint firstItem="CrM-oy-ef1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zB5-Bs-sim"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0Ch-St-d0I" appends="YES" id="GzG-kg-jq7"/>
+                            <outletCollection property="gestureRecognizers" destination="705-zz-q9T" appends="YES" id="hEQ-fl-LtS"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="gesture" destination="CrM-oy-ef1" id="Wae-cX-9Ln"/>
+                        <outlet property="gestureName" destination="CrM-oy-ef1" id="uuz-xk-Uwu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Kb0-2g-dzF">
                     <connections>
                         <action selector="singleTap:" destination="BYZ-38-t0r" id="3NU-8s-hhz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" numberOfTouchesRequired="2" id="0Ch-St-d0I">
+                    <connections>
+                        <action selector="doubleTap:" destination="BYZ-38-t0r" id="xrl-Bn-95X"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="5" numberOfTouchesRequired="5" id="705-zz-q9T">
+                    <connections>
+                        <action selector="fiveTap:" destination="BYZ-38-t0r" id="HCG-WK-tCh"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

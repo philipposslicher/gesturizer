@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var gesture: UILabel!
+    @IBOutlet weak var gestureName: UILabel!
     
     
     
@@ -26,8 +26,22 @@ class ViewController: UIViewController {
     }
 
     
-    @IBAction func singleTap(sender: AnyObject) {
+    @IBAction func singleTap(sender: UITapGestureRecognizer) {
+        gestureName.text = "Tap"
+        gestureName.hidden = false
     }
+
+    @IBAction func doubleTap(sender: UITapGestureRecognizer) {
+        gestureName.text = "Tap x2"
+        gestureName.hidden = false
+    }
+    
+    @IBAction func fiveTap(sender:
+        UITapGestureRecognizer) {
+            gestureName.text = ""
+            gestureName.hidden = false
+    }
+    
     
 }
 
