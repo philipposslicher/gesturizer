@@ -1,13 +1,6 @@
-/*
-
-This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike
-4.0 International License, by Yong Bakos.
-
-*/
-
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController {//
 
     @IBOutlet weak var gestureName: UILabel!
     
@@ -25,23 +18,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
-    @IBAction func singleTap(sender: UITapGestureRecognizer) {
-        gestureName.text = "Tap"
-        gestureName.hidden = false
+    @IBAction func singleTap(sender: AnyObject) {
+        showGestureName("Tap")
     }
 
-    @IBAction func doubleTap(sender: UITapGestureRecognizer) {
-        gestureName.text = "Tap x2"
+    func showGestureName(name: String) {
+        gestureName.text = name
         gestureName.hidden = false
+        UIView.animateWithDuration(1.0,
+            animations: { self.gestureName.alpha = 1.0 },
+            completion: { _ in
+                UIView.animateWithDuration(1.0) { self.gestureName.alpha = 0 }
+        })
     }
     
-    @IBAction func fiveTap(sender:
-        UITapGestureRecognizer) {
-            gestureName.text = ""
-            gestureName.hidden = false
-    }
-    
-    
-}
 
+}//
