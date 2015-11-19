@@ -18,10 +18,12 @@ class ViewController: UIViewController {//
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func singleTap(sender: AnyObject) {
-        showGestureName("Tap")
+    @IBAction func singleTap(sender: UITapGestureRecognizer) {
+        //showGestureName("Tap")
     }
 
+    
+    /*
     func showGestureName(name: String) {
         gestureName.text = name
         gestureName.hidden = false
@@ -31,6 +33,6 @@ class ViewController: UIViewController {//
                 UIView.animateWithDuration(1.0) { self.gestureName.alpha = 0 }
         })
     }
-    
+    */
 
 }//
