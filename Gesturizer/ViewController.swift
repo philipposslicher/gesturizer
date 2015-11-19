@@ -2,9 +2,12 @@ import UIKit
 
 class ViewController: UIViewController {//
 
+    
     @IBOutlet weak var gestureName: UILabel!
     
-    @IBAction func singleTap(sender: AnyObject) {
+    @IBAction func singleTap(sender: UITapGestureRecognizer) {
+        gestureName.text = "Single Tap"
+        gestureName.hidden = false
         //showGestureName("Tap")
     }
     
@@ -17,6 +20,7 @@ class ViewController: UIViewController {//
                 UIView.animateWithDuration(1.0) { self.gestureName.alpha = 0 }
         })
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,18 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foobar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrM-oy-ef1">
-                                <rect key="frame" x="199" y="252" width="202" height="96"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bassel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYa-vX-IIM">
+                                <rect key="frame" x="234" y="266" width="133" height="67"/>
                                 <animations/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="202" id="MlE-nW-iFg"/>
+                                    <constraint firstAttribute="width" constant="133" id="357-bW-aeN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="80"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="VG9-rU-1TA" appends="YES" id="T9J-xw-w3T"/>
+                                    <outletCollection property="gestureRecognizers" destination="DLH-gN-1nt" appends="YES" id="A33-ND-Kat"/>
                                 </connections>
                             </label>
                         </subviews>
@@ -35,21 +35,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="CrM-oy-ef1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UJF-wO-k8o"/>
-                            <constraint firstItem="CrM-oy-ef1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="232" id="YsM-61-yCa"/>
-                            <constraint firstItem="CrM-oy-ef1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zB5-Bs-sim"/>
+                            <constraint firstItem="LYa-vX-IIM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1mL-Jm-USM"/>
+                            <constraint firstItem="LYa-vX-IIM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UhP-rT-h7Z"/>
+                            <constraint firstItem="LYa-vX-IIM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="246" id="a5E-Jk-fA8"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="gesture" destination="CrM-oy-ef1" id="Wae-cX-9Ln"/>
-                        <outlet property="gestureName" destination="CrM-oy-ef1" id="uuz-xk-Uwu"/>
-                        <outlet property="labelForWords" destination="CrM-oy-ef1" id="WcC-rP-vSa"/>
+                        <outlet property="gestureName" destination="LYa-vX-IIM" id="Bbs-GO-vYN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="VG9-rU-1TA" userLabel="singleTap">
+                <tapGestureRecognizer id="DLH-gN-1nt" userLabel="Single Tap">
                     <connections>
-                        <action selector="singleTap:" destination="BYZ-38-t0r" id="Fxb-G1-0gq"/>
+                        <action selector="singleTap:" destination="BYZ-38-t0r" id="jgp-1N-9ez"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
