@@ -43,10 +43,11 @@
                     <connections>
                         <outlet property="gesture" destination="CrM-oy-ef1" id="Wae-cX-9Ln"/>
                         <outlet property="gestureName" destination="CrM-oy-ef1" id="uuz-xk-Uwu"/>
+                        <outlet property="labelForWords" destination="CrM-oy-ef1" id="WcC-rP-vSa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="VG9-rU-1TA">
+                <tapGestureRecognizer id="VG9-rU-1TA" userLabel="singleTap">
                     <connections>
                         <action selector="singleTap:" destination="BYZ-38-t0r" id="Fxb-G1-0gq"/>
                     </connections>

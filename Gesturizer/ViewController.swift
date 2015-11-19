@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {//
 
-    @IBOutlet weak var gestureName: UILabel
+    @IBOutlet weak var gestureName: UILabel!
     
     @IBAction func singleTap(sender: AnyObject) {
         //showGestureName("Tap")
