@@ -16,38 +16,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bassel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYa-vX-IIM">
-                                <rect key="frame" x="234" y="266" width="133" height="67"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M49-22-dpE">
+                                <rect key="frame" x="247" y="271" width="107" height="58"/>
                                 <animations/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="133" id="357-bW-aeN"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="DLH-gN-1nt" appends="YES" id="A33-ND-Kat"/>
-                                </connections>
                             </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="LYa-vX-IIM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1mL-Jm-USM"/>
-                            <constraint firstItem="LYa-vX-IIM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UhP-rT-h7Z"/>
-                            <constraint firstItem="LYa-vX-IIM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="246" id="a5E-Jk-fA8"/>
-                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="BMY-kG-LiO" appends="YES" id="PSk-oQ-92J"/>
+                            <outletCollection property="gestureRecognizers" destination="CuX-lT-yQv" appends="YES" id="5ua-so-3aV"/>
+                        </connections>
                     </view>
                     <connections>
-                        <outlet property="gestureName" destination="LYa-vX-IIM" id="Bbs-GO-vYN"/>
+                        <outlet property="doubleTapRecognizer" destination="CuX-lT-yQv" id="KNg-cy-19y"/>
+                        <outlet property="gestureName" destination="M49-22-dpE" id="2Yy-p2-RFb"/>
+                        <outlet property="singleTapRecognizer" destination="BMY-kG-LiO" id="SUL-zW-Fj1"/>
+                        <outlet property="singleTapRecognzier" destination="BMY-kG-LiO" id="cKQ-aV-VPy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="DLH-gN-1nt" userLabel="Single Tap">
+                <tapGestureRecognizer id="BMY-kG-LiO" userLabel="Single Tap">
                     <connections>
-                        <action selector="singleTap:" destination="BYZ-38-t0r" id="jgp-1N-9ez"/>
+                        <action selector="singleTap:" destination="BYZ-38-t0r" id="e6k-5y-MoS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="CuX-lT-yQv" userLabel="Double Tap">
+                    <connections>
+                        <action selector="doubleTap:" destination="BYZ-38-t0r" id="Fx4-HR-FVk"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
