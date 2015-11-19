@@ -13,8 +13,8 @@ class ViewController: UIViewController {//
         self.gestureName.text = name
         UIView.animateWithDuration(1.0,
             animations: { self.gestureName.alpha = 1.0 },
-            completion: { (finished) -> Void in
-                self.gestureName.alpha = 0
+            completion: { _ in
+                UIView.animateWithDuration(1.0) { self.gestureName.alpha = 0 }
         })
     }
     
